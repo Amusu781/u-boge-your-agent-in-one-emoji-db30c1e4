@@ -1,4 +1,7 @@
-"""Your Agent in One Emoji: writes one tiny emoji story to /output/entry.txt."""
+"""Your Agent in One Emoji: writes one tiny emoji story to /output/entry.txt.
+
+The story has three beats: a human's ask (💬), the agent at work (⚙️), and the polished result (💎).
+"""
 
 import os
 import shutil
@@ -20,7 +23,7 @@ def main() -> None:
             shutil.rmtree(path)
         else:
             os.remove(path)
-    # The entry is one tiny emoji story: 1-16 chars, a beginning, a middle, an end.
+    # The entry is one tiny emoji story: 1-16 chars, a beginning, a middle, an end — no plain robot, brain, or smiley.
     assert 1 <= len(LINE) <= 16, "entry must be 1-16 chars"
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         # One line only, no trailing newline.
